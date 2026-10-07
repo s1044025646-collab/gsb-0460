@@ -1,0 +1,22 @@
+{
+  "name": "rlc-sweep-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "串联 RLC 阻抗扫频与半功率点核验后端（API + CLI）",
+  "main": "dist/src/service.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/test/*.test.js\"",
+    "start": "npm run build && node dist/src/api.js",
+    "cli": "npm run build && node dist/src/cli.js",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.5.0"
+  }
+}
